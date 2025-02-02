@@ -12,9 +12,27 @@ const config: Config = {
       animation: {
         'border-glow': 'border-glow 3s ease infinite',
         'purple-glow': 'purple-glow 3s ease-in-out infinite',
-        
+        'gradient': "gradient 8s linear infinite",
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
       keyframes: {
+        'accordion-down': {
+          from: {
+            height: '0',
+          },
+          to: {
+            height: 'var(--radix-accordion-content-height)',
+          },
+        },
+        'accordion-up': {
+          from: {
+            height: 'var(--radix-accordion-content-height)',
+          },
+          to: {
+            height: '0',
+          },
+        },
         'purple-glow': {
           '0%, 100%': { 'box-shadow': '0 0 20px rgba(192, 132, 252, 0)' },
           '50%': { 'box-shadow': '0 0 40px rgba(192, 132, 252, 0.4)' },
@@ -83,33 +101,12 @@ const config: Config = {
           '5': 'hsl(var(--chart-5))',
         },
       },
-      keyframes: {
-        
-        'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-        },
-        'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
-        },
-      },
-      animation: {
-        'gradient': "gradient 8s linear infinite",
-        
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-      },
+    
+  
+    
     },
   },
-  plugins: [require('tailwindcss-animate')],
+
+  plugins: [require('tailwindcss-animate')]
 };
 export default config;
