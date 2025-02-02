@@ -5,8 +5,10 @@ import { Button } from "@/components/ui/button"
 import { Mail, ExternalLink, Star, ChevronRight } from "lucide-react"
 import { useState } from "react"
 
+
 export default function Sponsors() {
-  const [hoveredSponsor, setHoveredSponsor] = useState(null)
+  
+  const [hoveredSponsor, setHoveredSponsor] = useState<string | null>(null);
 
   const sponsorTiers = [
     {
@@ -122,11 +124,7 @@ export default function Sponsors() {
                     
                     <div className="relative p-6">
                       <div className="bg-black/40 rounded-lg p-4 mb-4">
-                        <img
-                          src={sponsor.logo}
-                          alt={sponsor.name}
-                          className="w-full h-32 object-contain filter brightness-110"
-                        />
+                        <img src={sponsor.logo} alt={sponsor.name} className="w-full h-32 object-contain filter brightness-110" />
                       </div>
                       <div className="flex items-center justify-between">
                         <h3 className="font-semibold text-gray-200 group-hover:text-white transition-colors">
@@ -147,9 +145,9 @@ export default function Sponsors() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative max-w-2xl mx-auto text-center mt-32 p-8 rounded-2xl border border-white/10 bg-black/40 backdrop-blur-sm"
+          className="relative max-w-2xl mx-auto text-center mt-32 p-8 rounded-2xl border border-white/10 bg-black/40 backdrop-blur-sm group"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           <h2 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             Become a Sponsor
           </h2>
