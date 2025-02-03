@@ -129,8 +129,9 @@ export default function Home() {
                 className="text-primary" 
                 animate={{ opacity: [0.8, 1, 0.8] }}
                 transition={{ duration: 2, repeat: Infinity }}
-              >code</motion.span> meets{' '}
+              >code</motion.span> meets{' '} the 
               reality in 24 hours of<br />
+
               non-stop innovation
             </motion.p>
             <motion.div
