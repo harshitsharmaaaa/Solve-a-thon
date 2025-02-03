@@ -55,8 +55,8 @@ export default function Navbar() {
         transition={{ duration: 0.6 }}
         className={`max-w-5xl mx-auto rounded-2xl transition-all duration-300 ${
           isScrolled 
-            ? 'bg-[#0a1930]/90 backdrop-blur-lg shadow-lg shadow-blue-900/20' 
-            : 'bg-[#0a1930]/70 backdrop-blur-md'
+            ? 'bg-[#0a1930]/90 md:backdrop-blur-lg shadow-lg shadow-blue-900/20' 
+            : 'bg-[#0a1930]/70 md:backdrop-blur-md'
         }`}
       >
         <div className="px-4 sm:px-6">
@@ -119,7 +119,7 @@ export default function Navbar() {
               animate="open"
               exit="closed"
               variants={menuVariants}
-              className="md:hidden border-t border-blue-400/10 bg-[#0a1930]/95 backdrop-blur-lg rounded-b-2xl overflow-hidden"
+              className="md:hidden border-t border-blue-400/10 bg-[#0a1930] rounded-b-2xl overflow-hidden"
             >
               <div className="px-4 py-3 space-y-3">
                 {navLinks.map((link) => {
@@ -156,7 +156,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsOpen(false)}
-            className="fixed inset-0 bg-[#0a1930]/20 backdrop-blur-sm z-40 md:hidden"
+            className="fixed inset-0 bg-black/40 z-40 md:hidden"
           />
         )}
       </AnimatePresence>
